@@ -1,0 +1,144 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    gap: 50px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    z-index: 101;
+    background-color: #242424;
+
+    .dropdown {
+        display: none;
+    }
+
+    .header__menu {
+        display: none;
+    }
+
+    h1 {
+        font-family: "Jersey 10", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: white;
+        font-size: 5rem;
+    }
+
+    input {
+        width: 73%;
+        border-radius: 25px;
+        height: 50px;
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+
+    .settings {
+        scale: 2;
+        padding-right: 20px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+
+    header {
+        margin-top: 20px;
+        width: 100%;
+        gap: 20px;
+        height: 5vh;
+
+        .dropdown {
+            display: block;
+
+            .dropdown-menu {
+                position: absolute;
+                width: 100%;
+                left: 0;
+                background-color: #242424;
+                z-index: 1500;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5vh 15vw 5vh 15vw;
+                border-bottom: #2e7ab1 solid 1px;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    gap: 20px;
+
+                    li {
+                        font-size: 1.3rem;
+                        color: white;
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: start;
+                    }
+
+                    a {
+                        color: white;
+                        display: flex;
+                        justify-content: start;
+                        gap: 20px;
+                        align-items: center;
+                    }
+
+                    a:hover {
+                        color: #646CFF;
+                    }
+                }
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .settings {
+            padding-right: 10px;
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    header {
+        margin-top: 10px;
+        flex-direction: column;
+        height: unset;
+    }
+
+    .settings {
+        display: none;
+    }
+}
+
+
+@media (max-width: 425px) {
+    header {
+        .dropdown {
+            .dropdown-menu {
+                flex-direction: column;
+                gap: 40px;
+                align-items: start;
+
+                ul {
+                    li {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+
+        input {
+            width: 90%;
+        }
+    }
+}
